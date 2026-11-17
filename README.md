@@ -1,100 +1,128 @@
-# StudySync 🎯
+# StudySync – Decentralized Focus & Pomodoro Battle Arena 🎯
 
-### Making solo study sessions a little less lonely.
+**StudySync** is a gamified study platform designed to make focused learning more engaging, interactive, and motivating. It introduces a competitive study environment where users can participate in virtual study rooms, follow Pomodoro sessions, earn focus points, and track their productivity.
 
-Ever opened your laptop to study, only to find yourself scrolling through Instagram 15 minutes later? Or planned a two-hour study session that somehow turned into a 20-minute productivity burst?
+The idea behind StudySync is simple: make studying less lonely and more rewarding through gamification.
 
-That's the problem behind **StudySync**.
+## ✨ Key Features
 
-StudySync is a proposed collaborative study platform where students can join virtual study rooms, follow Pomodoro sessions together and keep each other accountable through a little friendly competition.
+- **Pomodoro Timer:** A 25-minute study timer with start, pause, and reset controls.
+- **Demo Mode:** A 10-second timer mode for quickly testing the application.
+- **Virtual Study Rooms:** Create and join study rooms using room codes (simulated in the current prototype).
+- **Focus Points:** Earn 25 points for every completed study session.
+- **Distraction Tracker:** Keep track of distractions during study sessions.
+- **Leaderboard:** Compare focus points with sample players.
+- **Session History:** View completed sessions along with their dates, times, and earned points.
+- **Progress Tracking:** Automatically save study progress using browser LocalStorage.
+- **Reset Progress:** Clear saved points, sessions, and distraction records.
 
-The idea is simple: studying becomes easier when you know someone else is trying to stay focused too.
+## 🛠️ Tech Stack
 
-## 💡 The Problem
+| Technology | Purpose |
+|---|---|
+| HTML5 | Application structure |
+| CSS3 | Styling and responsive layout |
+| JavaScript (ES6 Modules) | Application functionality |
+| LocalStorage | Client-side data persistence |
+| Git & GitHub | Version control and project hosting |
 
-Studying alone sounds productive until distractions start taking over.
-
-Some common problems students face:
-
-- Starting a study session but struggling to stay consistent.
-- Getting distracted by social media, notifications or random browsing.
-- Finding it difficult to maintain a regular study routine.
-- Losing motivation when there's nobody to share progress with.
-- Setting productivity goals but having no real accountability.
-
-Most productivity apps help you manage your time, but staying motivated is a different challenge.
-
-## 🚀 The Idea Behind StudySync
-
-StudySync aims to combine the Pomodoro technique with collaborative study rooms and gamification.
-
-Instead of studying alone, students will be able to join a room, start a shared focus session and compete to maintain their focus.
-
-Think of it as a study session with a little friendly rivalry.
-
-## ✨ Planned Features
-
-- **Collaborative Study Rooms:** Create a room or join one using a shared room code.
-- **Pomodoro Timer:** Follow structured focus and break intervals.
-- **Focus Battle:** Start with 100 HP and lose points when distractions occur.
-- **Real-Time Updates:** See how other participants are doing during a session.
-- **Focus Tracking:** Keep track of completed sessions and focus scores.
-- **Leaderboard:** Compare progress and add a little motivation to studying.
-
-These are planned features, not a claim that the complete application is already built.
-
-## 🛠️ Proposed Technology Stack
-
-| Technology            | Purpose                           |
-| --------------------- | --------------------------------- |
-| Node.js               | Backend runtime                   |
-| Express.js            | Server and API development        |
-| SQLite                | Database management               |
-| WebSockets            | Real-time communication           |
-| HTML, CSS, JavaScript | Frontend development              |
-| Git & GitHub          | Version control and collaboration |
-| GitHub Actions        | Continuous Integration            |
-
-## 📁 Repository Structure
+## 📁 Project Structure
 
 ```text
-studysync/
+StudySync/
+│
+├── index.html
+├── style.css
+│
+├── js/
+│   ├── app.js
+│   ├── timer.js
+│   ├── rooms.js
+│   ├── focus.js
+│   ├── leaderboard.js
+│   └── history.js
 │
 ├── docs/
-│   ├── project-overview.md
-│   └── requirements.md
+│   └── project-overview.md
 │
-├── CONTRIBUTING.md
 └── README.md
 ```
 
-The repository currently focuses on project documentation, requirements, Git workflows and development practices. Application development is a future step.
+## 🚀 Getting Started
 
-## 🗺️ Project Roadmap
+Follow these steps to run StudySync locally.
 
-- [ ] Create the GitHub repository.
-- [ ] Document the project idea and overview.
-- [ ] Prepare functional and non-functional requirements.
-- [ ] Add contribution guidelines.
-- [ ] Finalise the system design and database structure.
-- [ ] Develop the core application modules.
-- [ ] Add collaborative study rooms and Pomodoro sessions.
-- [ ] Implement focus tracking and leaderboards.
-- [ ] Configure and verify automated CI checks.
+### Prerequisites
+- Visual Studio Code
+- A modern web browser
+- Live Server extension for VS Code
 
-## 🤝 Contributions
+### Installation
 
-Suggestions, improvements and ideas are welcome!
+1. Clone the repository:
 
-If you find something that could make StudySync more useful or have an idea for a feature, feel free to open an issue or suggest an improvement.
+```bash
+git clone https://github.com/Kripa-Garg/StudySync.git
+```
 
+2. Navigate to the project directory:
 
-## 📌 Current Status
+```bash
+cd StudySync
+```
 
-StudySync is currently in its planning and documentation stage. The repository is being used to organise the project, maintain requirements and demonstrate development workflows before moving towards application implementation.
+3. Open the folder in Visual Studio Code.
 
-The goal is to build something that addresses a real student problem rather than just another productivity dashboard.
+4. Install the Live Server extension if you haven't already.
+
+5. Right-click `index.html` and select **Open with Live Server**.
+
+6. The StudySync application will open in your browser.
+
+## ⚙️ How It Works
+
+1. Open the application in your browser.
+2. Start a Pomodoro study session.
+3. Use the pause or reset controls whenever required.
+4. Complete a session to earn 25 focus points.
+5. Track your distractions and study history.
+6. Check the leaderboard to compare your progress.
+7. Create or join a virtual study room using a room code.
+
+## 💾 Data Storage
+
+The current prototype uses browser LocalStorage to maintain:
+- Focus points
+- Completed study sessions
+- Distraction count
+- Session history
+
+This allows user progress to remain available after refreshing the browser on the same device and browser.
+
+## 🔮 Future Enhancements
+
+The following features are planned for future development:
+
+- Real-time multiplayer study rooms using WebSockets.
+- Backend integration and database management.
+- User authentication and individual profiles.
+- Camera-based attention monitoring with user consent.
+- Real-time leaderboard synchronization.
+- Competitive focus battles and reward mechanisms.
+- Advanced productivity analytics and study reports.
+
+## 📌 Current Project Status
+
+StudySync is currently a **functional frontend prototype**. Its timer, room simulation, focus-point system, leaderboard, session history, and local progress tracking are implemented.
+
+Backend services, real-time multiplayer functionality, database integration, authentication, and camera-based attention monitoring are planned enhancements and are not yet implemented.
+
+## 👩‍💻 Contributors
+
+Developed as a Software Engineering project.
+
+**Repository:** [StudySync – GitHub](https://github.com/Kripa-Garg/StudySync)
 
 ---
 
-*Built around a simple thought: maybe staying focused is easier when we're doing it together.*
+*Study smarter. Stay focused. Grow together.* 🚀
