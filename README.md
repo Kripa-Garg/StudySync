@@ -16,6 +16,12 @@ The idea behind StudySync is simple: make studying less lonely and more rewardin
 - **Progress Tracking:** Automatically save study progress using browser LocalStorage.
 - **Reset Progress:** Clear saved points, sessions, and distraction records.
 
+## 📸 Application Screenshot
+
+### StudySync Dashboard
+
+<img width="100%" alt="StudySync Dashboard" src="https://github.com/user-attachments/assets/bece6f49-4064-4ad6-8149-e80c59ca75fa" />
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
@@ -53,6 +59,7 @@ StudySync/
 Follow these steps to run StudySync locally.
 
 ### Prerequisites
+
 - Visual Studio Code
 - A modern web browser
 - Live Server extension for VS Code
@@ -92,6 +99,7 @@ cd StudySync
 ## 💾 Data Storage
 
 The current prototype uses browser LocalStorage to maintain:
+
 - Focus points
 - Completed study sessions
 - Distraction count
