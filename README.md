@@ -88,7 +88,6 @@ Suggestions, improvements and ideas are welcome!
 
 If you find something that could make StudySync more useful or have an idea for a feature, feel free to open an issue or suggest an improvement.
 
-Please check [CONTRIBUTING.md](CONTRIBUTING.md) before contributing.
 
 ## 📌 Current Status
 
