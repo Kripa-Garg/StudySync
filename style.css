@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #171321;
+    color: #352b42;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.topbar {
+    height: 70px;
+    background: #211a2d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f3b6c8;
+}
+
+.top-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e8ddeb;
+}
+
+.online-dot {
+    height: 9px;
+    width: 9px;
+    background: #78e0b0;
+    border-radius: 50%;
+}
+
+.profile {
+    background: #f3b6c8;
+    color: #352b42;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+
+.room-container {
+    max-width: 1500px;
+    margin: auto;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* VIRTUAL STUDY ROOM */
+
+.study-room {
+    height: min(680px, calc(100vh - 110px));
+    min-height: 480px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: sticky;
+    top: 20px;
+    background: #c58b9a;
+    box-shadow: 0 15px 35px #09071180;
+}
+
+.room-wall {
+    height: 72%;
+    position: relative;
+    background:
+        repeating-linear-gradient(0deg,
+            transparent 0px,
+            transparent 48px,
+            #613d57 49px,
+            #613d57 52px),
+        repeating-linear-gradient(90deg,
+            #98637d 0px,
+            #98637d 95px,
+            #744963 96px,
+            #744963 99px);
+    border-bottom: 12px solid #714b4a;
+}
+
+.window {
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    width: 150px;
+    height: 170px;
+    background: #f5c8a1;
+    border: 12px solid #704657;
+    border-radius: 8px;
+}
+
+.window-light {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffe0a8, #f4b9ad);
+}
+
+.shelf {
+    position: absolute;
+    right: 35px;
+    top: 50px;
+    width: 125px;
+    height: 190px;
+    background: #70443f;
+    border: 8px solid #573634;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 8px;
+}
+
+.shelf-books {
+    height: 55px;
+    background: #c18a65;
+    border-bottom: 7px solid #58362f;
+    font-size: 22px;
+    text-align: center;
+    padding: 5px;
+}
+
+.plant {
+    position: absolute;
+    left: 60px;
+    top: 235px;
+    font-size: 60px;
+}
+
+.wall-clock {
+    position: absolute;
+    right: 190px;
+    top: 35px;
+    background: #f8e4d4;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.desk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #9a503c;
+    border-top: 12px solid #bd7654;
+}
+
+.desk-items {
+    position: absolute;
+    right: 25%;
+    top: -58px;
+    font-size: 35px;
+}
+
+.avatar-area {
+    position: absolute;
+    bottom: 75px;
+    left: 48%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.avatar-name {
+    display: inline-block;
+    background: #fff0c7;
+    padding: 8px 20px;
+    border-radius: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.avatar {
+    font-size: 115px;
+}
+
+.avatar-caption {
+    background: #fce6d8;
+    padding: 7px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.room-label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.room-floor {
+    height: 28%;
+    position: relative;
+    background: linear-gradient(135deg, #bc8970, #865c56);
+}
+
+.rug {
+    position: absolute;
+    width: 65%;
+    height: 75px;
+    background: #9c5260;
+    border-radius: 50%;
+    left: 17%;
+    top: 35px;
+}
+
+.sofa {
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    font-size: 85px;
+}
+
+.floor-plant {
+    position: absolute;
+    right: 35px;
+    bottom: 10px;
+    font-size: 50px;
+}
+
+/* RIGHT DASHBOARD */
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.panel-card {
+    background: #fff8f2;
+    border: 1px solid #ead9dc;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 20px #08061145;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.panel-heading span {
+    font-size: 23px;
+}
+
+.panel-heading h2 {
+    font-size: 19px;
+    color: #543b56;
+}
+
+.subtext {
+    color: #9b8495;
+    font-size: 13px;
+}
+
+/* TIMER */
+
+#timer {
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+    color: #704c75;
+    margin: 15px 0;
+}
+
+.timer-progress {
+    height: 8px;
+    background: #eadde7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background: #d88ba7;
+    border-radius: 20px;
+    transition: width 0.5s;
+}
+
+.mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.timer-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.session-label {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #a58d9d;
+    margin-top: 15px;
+}
+
+/* BUTTONS */
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 11px 15px;
+    border-radius: 9px;
+    background: #ba7895;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #965d7c;
+}
+
+.mode-btn {
+    background: #eadde7;
+    color: #614967;
+    font-size: 12px;
+}
+
+.mode-btn.active {
+    background: #ba7895;
+    color: white;
+}
+
+.secondary {
+    background: #e8dce7;
+    color: #614967;
+}
+
+/* STUDY ROOM CONTROLS */
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0;
+    border: 1px solid #e2cbd7;
+    border-radius: 8px;
+    outline: none;
+    background: white;
+    color: #49384d;
+}
+
+input:focus {
+    border-color: #ba7895;
+}
+
+.full-button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+#roomCode,
+#roomStatus {
+    font-size: 12px;
+    color: #977c90;
+    margin: 8px 0;
+}
+
+.join-area {
+    display: flex;
+    gap: 8px;
+}
+
+.join-area input {
+    flex: 1;
+    min-width: 0;
+}
+
+.join-area button {
+    margin-top: 7px;
+}
+
+/* PROGRESS CARDS */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.stat {
+    background: #f3e7ed;
+    border-radius: 12px;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat span {
+    font-size: 22px;
+}
+
+.stat strong {
+    color: #714e79;
+    font-size: 21px;
+}
+
+.stat small {
+    font-size: 11px;
+    color: #8e778e;
+}
+
+.distraction-button {
+    width: 100%;
+    margin-top: 15px;
+    background: #d89b91;
+}
+
+.reset-progress-button {
+    width: 100%;
+    margin-top: 10px;
+    background: #e8dce7;
+    color: #76536e;
+    border: 1px solid #d7bdcf;
+}
+
+.reset-progress-button:hover {
+    background: #d9c3d4;
+    color: #49344d;
+}
+
+/* LEADERBOARD */
+
+#leaderboard {
+    padding-left: 0;
+    line-height: 1.5;
+    color: #765d78;
+}
+
+/* SESSION HISTORY */
+
+.history-card {
+    margin-bottom: 20px;
+}
+
+#sessionHistory {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #f3e7ed;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.history-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.history-item strong {
+    color: #65496c;
+    font-size: 13px;
+}
+
+.history-item small {
+    color: #9b8495;
+    font-size: 11px;
+}
+
+.history-points {
+    color: #269c75;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.empty-history {
+    color: #9b8495;
+    font-size: 13px;
+    padding: 12px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #cbb9ce;
+    font-size: 12px;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 950px) {
+    .room-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .study-room {
+        position: relative;
+        top: auto;
+        height: 550px;
+    }
+}
+
+@media (max-width: 550px) {
+    .topbar {
+        padding: 0 18px;
+    }
+
+    .room-container {
+        padding: 12px;
+        gap: 18px;
+    }
+
+    .study-room {
+        height: 450px;
+        min-height: 400px;
+    }
+
+    .avatar {
+        font-size: 85px;
+    }
+
+    .shelf {
+        right: 15px;
+        transform: scale(0.8);
+        transform-origin: top right;
+    }
+
+    .window {
+        left: 15px;
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+
+    .panel-card {
+        padding: 18px;
+    }
+
+    #timer {
+        font-size: 45px;
+    }
+
+    .stats-grid {
+        gap: 6px;
+    }
+}

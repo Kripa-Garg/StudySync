@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySync | Virtual Study Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">Study<span>Sync.</span></div>
+        <div class="top-info">
+            <span class="online-dot"></span>
+            <span>Focus Mode</span>
+            <div class="profile">YOU</div>
+        </div>
+    </header>
+
+    <main class="room-container">
+
+        <section class="study-room">
+            <div class="room-wall">
+                <div class="window">
+                    <div class="window-light"></div>
+                </div>
+
+                <div class="shelf">
+                    <div class="shelf-books">📚 📕 📗</div>
+                    <div class="shelf-books">📘 📙</div>
+                </div>
+
+                <div class="plant">🪴</div>
+                <div class="wall-clock">◷</div>
+
+                <div class="desk">
+                    <div class="desk-items">📚 ☕ 💻</div>
+                </div>
+
+                <div class="avatar-area">
+                    <div class="avatar-name">YOU</div>
+                    <div class="avatar">👩🏻‍💻</div>
+                    <div class="avatar-caption">Studying hard!</div>
+                </div>
+
+                <div class="room-label">YOUR STUDY ROOM</div>
+            </div>
+
+            <div class="room-floor">
+                <div class="rug"></div>
+                <div class="sofa">🛋️</div>
+                <div class="floor-plant">🌿</div>
+            </div>
+        </section>
+
+        <aside class="control-panel">
+
+            <section class="panel-card timer-card">
+                <div class="panel-heading">
+                    <span>⏳</span>
+                    <h2>Pomodoro Timer</h2>
+                </div>
+
+                <p class="subtext">Time to focus on your goals</p>
+                <div id="timer">25:00</div>
+
+                <div class="timer-progress">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="mode-switch">
+                    <button id="normalMode" class="mode-btn active">25 Min</button>
+                    <button id="demoMode" class="mode-btn">Demo • 10 Sec</button>
+                </div>
+
+                <div class="timer-buttons">
+                    <button id="startBtn">▶ Start</button>
+                    <button id="pauseBtn" class="secondary">Ⅱ Pause</button>
+                    <button id="resetBtn" class="secondary">↻ Reset</button>
+                </div>
+
+                <p class="session-label" id="sessionLabel">
+                    FOCUS SESSION • 25 MIN
+                </p>
+            </section>
+
+            <section class="panel-card room-card">
+                <div class="panel-heading">
+                    <span>🏠</span>
+                    <h2>Study Room</h2>
+                </div>
+
+                <input type="text" id="username" placeholder="Enter your name">
+
+                <button id="createRoomBtn" class="full-button">
+                    + Create a Room
+                </button>
+
+                <p id="roomCode">No room created yet</p>
+
+                <div class="join-area">
+                    <input type="text" id="joinCode" placeholder="Enter room code">
+                    <button id="joinRoomBtn">Join</button>
+                </div>
+
+                <p id="roomStatus">Not in a room</p>
+            </section>
+
+            <section class="panel-card stats-card">
+                <div class="panel-heading">
+                    <span>⭐</span>
+                    <h2>Your Progress</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span>🏆</span>
+                        <strong id="points">0</strong>
+                        <small>Focus Points</small>
+                    </div>
+
+                    <div class="stat">
+                        <span>📖</span>
+                        <strong id="sessions">0</strong>
+                        <small>Sessions</small>
+                    </div>
+
+                    <div class="stat">
+                        <span>☕</span>
+                        <strong id="distractions">0</strong>
+                        <small>Distractions</small>
+                    </div>
+                </div>
+
+                <button id="distractionBtn" class="distraction-button">
+                    Record a Distraction
+                </button>
+
+                <button id="resetProgressBtn" class="reset-progress-button">
+                    Reset My Progress
+                </button>
+            </section>
+
+            <section class="panel-card leaderboard-card">
+                <div class="panel-heading">
+                    <span>🥇</span>
+                    <h2>Leaderboard</h2>
+                </div>
+
+                <ol id="leaderboard"></ol>
+            </section>
+
+            <!-- NEW SESSION HISTORY SECTION -->
+            <section class="panel-card history-card">
+                <div class="panel-heading">
+                    <span>📚</span>
+                    <h2>Study Session History</h2>
+                </div>
+
+                <div id="sessionHistory">
+                    <p class="empty-history">
+                        No completed sessions yet. Start studying!
+                    </p>
+                </div>
+            </section>
+
+        </aside>
+    </main>
+
+    <footer>
+        StudySync © 2026 | Focus Together. Achieve Together.
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
